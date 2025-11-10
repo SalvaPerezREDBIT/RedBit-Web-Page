@@ -42,7 +42,7 @@ form.addEventListener('submit', async (e) => {
     // Si la respuesta es OK, muestra mensaje de éxito y limpia el formulario
     if (res.ok) {
       form.reset();
-      msg.textContent = '¡Gracias! Te contactamos a la brevedad.';
+      msg.textContent = '¡Gracias! Te contactaremos a la brevedad.';
       msg.style.color = 'seagreen';
     } else {
       // Si hay error, muestra mensaje de error

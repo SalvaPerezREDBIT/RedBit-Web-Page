@@ -1,0 +1,94 @@
+
+
+/* EN ESTE MOMENTO NO SE USA, --> ESTA TODO EN RESPONSIVE */
+
+.logo img {
+    width: 110px;
+    height: auto;
+    transition: width 1s;
+}
+.logo img.shrink {
+    width: 40px;
+}
+html{
+    border: #333, 1px solid;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: #fff;
+    transition: height 1s, box-shadow 2s;
+    height: 200px; /* altura inicial más alta */
+}
+header.shrink {
+    height: 90px; /* altura cuando haces scroll */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.hamburger {
+  display: none; /* oculta en desktop */
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Menú desktop */
+nav#main-menu ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .brand{
+        justify-content: center;
+        width: 10%;
+    }
+
+    /* Estilos para el menú hamburguesa */
+    nav#main-menu {
+        display: none;           /* oculto por defecto */
+        position: absolute;
+        top: 60px;               /* debajo del header */
+        right: 0;
+        background: white;
+        width: 200px;
+    }
+    nav#main-menu ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .bar {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .brand {
+        flex: 1;
+    }
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+    nav#main-menu.active {
+        display: block; /* se muestra cuando está activo */
+    }
+    .cta-outline {
+        justify-content: center;
+    }
+
+    /* Ocultar el botón "Conectemos" en móvil 
+    .cta-outline {
+        display: none !important;
+    }*/
+}

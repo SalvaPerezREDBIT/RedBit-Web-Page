@@ -165,6 +165,14 @@ nav#main-menu a{ font-weight:700 }
     background-position: center center;
     background-size: cover;
   }
+  .hero p {
+  color: #222; /* o #222 para mejor contraste */
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.8);
+  background: rgb(255, 255, 255); /* Fondo semitransparente */
+  border-radius: 6px;
+  display: inline-block;
+  padding: 5px 7px;
+  }
 }
 
 /* ===========================
@@ -248,7 +256,15 @@ nav#main-menu a{ font-weight:700 }
   max-width:16ch;
 }
 .about2-left{ justify-content:center; align-items:center }
-.about2-right p{ font-size:1.2rem; line-height:1.6 }
+.about2-right{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  gap:10px;
+}
+.about2-right p{ font-size:1.2rem; line-height:1.6; justify-content:center; align-items:center }
 
 /* ===========================
    SERVICIOS (cards)
